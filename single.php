@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <?php if (is_singular('procedure')) { ?>
-    <?php get_template_part('page-template/content', 'page'); ?>
+    <?php get_template_part('components/content-page'); ?>
 <?php } elseif (is_singular('gallery')) {
 
     $gallery = get_field('single_gallery_layout', 'options');
@@ -13,7 +13,7 @@
         get_template_part('components/galleries/single-template3');
     endif;
 } else { ?>
-    <div class="row justify-content-center section-padding">
+    <div class="row blog--page justify-content-center section-padding">
         <div class="col-lg-7 col-12">
             <?php if (have_posts()) : ?>
 

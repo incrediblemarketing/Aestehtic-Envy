@@ -12,9 +12,9 @@ $ta = get_sub_field('text_align');
 $pad = get_sub_field('padding');
 $bt = get_sub_field('button_text');
 $bu = get_sub_field('button_url');
-
-echo '<section class="row procedures ' . $rc . '" data-color="' . $fc . '" data-size="' . $fs . '" data-bgc="' . $bc . '">';
-echo '<div class="' . $c1c . ' ' . $ta  . ' sh-col">';
+echo '<div class="container">';
+echo '<section class="row procedures--grid ' . $rc . '" data-color="' . $fc . '" data-size="' . $fs . '" data-bgc="' . $bc . '">';
+echo '<div class="col-12 ' . $c1c . ' ' . $ta  . ' sh-col">';
 if ($pad) {
     echo '<div class="' . $pad . '">';
 }
@@ -22,7 +22,7 @@ if ($pad) {
 if ($title || $content) {
     echo '<div class="info"><div class="inner">';
     if ($title) {
-        echo '<h3>' . $title . '</h3>';
+        echo '<h2>' . $title . '</h2>';
     }
 
     if ($content) {
@@ -36,13 +36,13 @@ if ($posts) : ?>
         <?php foreach ($procedures as $post) :
             setup_postdata($post);
             $thumb_id = get_post_thumbnail_id();
-            $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'procedure_sm_thumb', true);
+            $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'postslider_thumb', true);
             $thumb_url = $thumb_url_array[0]; ?>
-            <div class=" procedure-card col-md-4 col-sm-6 col-xs-12">
+            <div class="procedure-card">
                 <a href="<?php the_permalink(); ?>">
-                    <div class="card-bottom" data-bg="<?php echo $thumb_url; ?>">
-                        <div class="primary-hover"></div>
-                        <h3><?php echo get_the_title(); ?></h3>
+                    <div class="card-bottom">
+											<img src="<?php echo $thumb_url; ?>" />
+                      <h3><?php echo get_the_title(); ?></h3>
                     </div>
                 </a>
             </div>
@@ -56,3 +56,4 @@ if ($pad) {
 }
 echo '</div>';
 echo '</section>';
+echo '</div>';

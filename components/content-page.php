@@ -1,6 +1,6 @@
 <?php
 if (have_rows('sections')) :
-    while (have_rows('sections')) : the_row();
+		while (have_rows('sections')) : the_row();
 
         /* HERO SECTION
 			================================================*/
@@ -11,6 +11,16 @@ if (have_rows('sections')) :
 			================================================*/
         } elseif (get_row_layout() == 'page') {
             echo get_template_part('components/blocks/page');
+			 
+					/* Gallery Accordion
+			================================================*/
+        } elseif (get_row_layout() == 'gallery_accordion') {
+						echo get_template_part('components/blocks/gallery_accordion');
+						
+					/* 1 Column with Image
+			================================================*/
+        } elseif (get_row_layout() == '1_column_with_image') {
+            echo get_template_part('components/blocks/1_column_with_image');
 
             /* RELATED POSTS
 			================================================*/

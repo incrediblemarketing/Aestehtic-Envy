@@ -14,14 +14,14 @@
         padding: 0;
         list-style: none;
 
-        >li {
+        > li {
             display: flex;
 
-            +li {
+            + li {
                 margin-left: 1em;
             }
 
-            >a {
+            > a {
                 display: flex;
                 align-items: center;
             }
@@ -40,7 +40,8 @@
     width: 100%;
     opacity: 0;
     transform: translateY(-100%);
-    transition: all .2s;
+    transition: all 0.2s;
+    box-shadow: rgba($black, 0.1) 0 3px 3px;
 
     &.visible {
         opacity: 1;

@@ -5,23 +5,23 @@
 html {
     background: white;
     font-size: 16px;
+
+    @include mq(xxl) {
+        font-size: 18px;
+    }
 }
 
 body {
     font-family: $primary-font;
     font-weight: 300;
     font-size: 1rem;
-    line-height: 1.5em;
+    line-height: 1.77778em;
     overflow-x: hidden;
     color: $charcoal;
-    background-color: $off-white;
+    background-color: $white;
     max-width: 100%;
     font-kerning: none;
     -webkit-font-smoothing: antialiased;
-
-    @include mq(xxl) {
-        font-size: 18px;
-    }
 }
 
 *:last-child {
@@ -81,7 +81,7 @@ textarea:focus {
     outline: none;
 }
 
-input[type=submit] {
+input[type="submit"] {
     cursor: pointer;
 }
 

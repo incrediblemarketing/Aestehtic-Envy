@@ -4,7 +4,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $tertiary-font;
+    font-family: $primary-font;
     font-weight: 300;
 }
 
@@ -16,19 +16,41 @@ h1 {
         text-align: center;
 
         &::after {
-            content: '';
+            content: "";
             display: block;
             width: 150px;
             height: 2px;
             background: $primary;
             margin: 30px auto;
         }
+    }
 
+    body:not(.home) & {
+        font-size: 2.5rem;
+        border-bottom: 2px solid $primary;
+        margin-bottom: 35px;
     }
 }
 
 h2 {
-    font-size: 3.5rem;
+    font-size: 3.11rem;
+    font-weight: 300;
+    line-height: 1em;
+    text-align: center;
+    text-transform: uppercase;
+    color: $primary;
+    margin-bottom: 85px;
+    strong {
+        font-weight: normal;
+    }
+    body:not(.home) .page-content & {
+        font-size: 2rem;
+        text-align: left;
+        text-transform: initial;
+        margin-bottom: 35px;
+        margin-top: 60px;
+        color: $black;
+    }
 }
 
 h3 {
@@ -39,6 +61,13 @@ h3 {
 
     @include mq(sm) {
         font-size: 2.6rem;
+    }
+
+    body:not(.home) .page-content & {
+        font-size: 1.5rem;
+        line-height: 1em;
+        margin-bottom: 15px;
+        text-transform: initial;
     }
 }
 
@@ -54,4 +83,10 @@ h5 {
 
 h6 {
     font-size: 1.15rem;
+}
+
+ul {
+    body:not(.home) & {
+        padding-left: 20px;
+    }
 }

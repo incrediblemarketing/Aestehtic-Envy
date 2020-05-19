@@ -12,30 +12,14 @@
 					foreach ( $myposts as $post ) : 
 						setup_postdata( $post ); ?>
 						<div class="swiper-slide">
-							<div class="item">                                
+							<div class="item">   
+								<a href="<?php echo get_the_permalink(); ?>">
 								<?php $bg = get_the_post_thumbnail_url( $post->ID, 'postslider_thumb' );
 								if($bg){
 									echo '<img src="'.$bg.'" />';
 								} ?>
 								<h3><?php the_title(); ?></h3>
-
-								<div class="child-pages">
-									<?php
-									$args = array(
-										'post_type'      => 'gallery',
-										'posts_per_page' => -1,
-										'post_parent' => $post->ID,
-										'order'          => 'ASC',
-										'orderby'        => 'menu_order'
-
-									 );
-									$parent = new WP_Query( $args );
-									if ( $parent->have_posts() ) : ?>
-										<?php while ( $parent->have_posts() ) : $parent->the_post(); ?>
-												<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-										<?php endwhile; ?>
-									<?php endif; ?>
-								</div>
+								</a>
 							</div>
 						</div>
 						<?php endforeach;

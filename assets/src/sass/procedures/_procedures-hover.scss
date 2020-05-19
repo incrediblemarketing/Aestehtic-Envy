@@ -5,7 +5,7 @@
         border-left: 30px solid transparent;
         border-right: 30px solid transparent;
         border-top: 30px solid #ebebeb;
-        content: '';
+        content: "";
         top: 0;
         left: calc(50% - 30px);
         position: absolute;
@@ -49,7 +49,7 @@
             min-width: 350px;
 
             &::before {
-                content: '';
+                content: "";
                 background: rgba(0, 0, 0, 0.55);
                 position: absolute;
                 width: 100%;
@@ -110,6 +110,45 @@
                     opacity: 1;
                 }
             }
+        }
+    }
+}
+
+.procedures--grid {
+    padding: 188px 0 171px;
+
+    h2 {
+        font-weight: normal;
+        margin-bottom: 85px;
+    }
+
+    .procedure-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 11px;
+
+        .procedure-card {
+            position: relative;
+        }
+
+        h3 {
+            position: absolute;
+            background: rgba($primary, 0.9);
+            padding: 6px 28px;
+            color: $white;
+            text-transform: uppercase;
+            font-size: 24px;
+            line-height: 24px;
+            text-align: center;
+            bottom: 45px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 250px;
+            max-width: 95%;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     }
 }

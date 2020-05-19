@@ -1,13 +1,13 @@
 .gallery.g3 {
-    background: #000;
+    background: $white;
 
     .inner-container {
-        border: 1px solid #666;
-        padding: 15px 30px;
+        border: 1px solid $primary;
+        padding: 35px;
     }
 
     h4.fancy {
-        color: $white;
+        color: $black;
         margin: 20px 0;
         display: flex;
         flex-direction: row;
@@ -16,7 +16,7 @@
 
         &::after {
             background-color: $primary;
-            content: '\a0';
+            content: "\a0";
             flex-grow: 1;
             height: 1px;
             position: relative;
@@ -35,16 +35,16 @@
             display: flex;
         }
 
-        >div {
+        > div {
             width: 100%;
-            color: $white;
+            color: $black;
 
             @include mq(lg) {
-                width: 50%;
+                width: 100%;
             }
 
             img {
-                width: 50%;
+                width: 100%;
                 padding: 5px;
             }
 
@@ -53,7 +53,7 @@
             }
         }
 
-        >.desc>hr:first-of-type {
+        > .desc > hr:first-of-type {
             margin-bottom: 8px;
         }
     }
@@ -81,8 +81,8 @@
     }
 
     hr {
-        background: $white;
-        color: $white;
+        background: $primary;
+        color: $primary;
         height: 1px;
     }
 
@@ -115,7 +115,7 @@
         background: transparent;
         color: $white;
         border: 1px solid $white;
-        transition: all .2s ease-in-out;
+        transition: all 0.2s ease-in-out;
         top: 22px;
         left: 0;
         width: auto;

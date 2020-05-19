@@ -24,7 +24,7 @@ var gulp = require('gulp'),
     zip = require('gulp-zip');
 
 var themeName = 'incredibletheme',
-    localSiteUrl = 'imdesignstudio.local',
+    localSiteUrl = 'dev.aesthetic-envy.com',
     buildDir = './build/',
     buildInclude = [
         // include all

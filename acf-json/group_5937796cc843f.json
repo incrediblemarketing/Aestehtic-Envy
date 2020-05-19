@@ -152,6 +152,30 @@
             "mime_types": "jpg, svg, png"
         },
         {
+            "key": "field_5ec324a9c513b",
+            "label": "Footer Logo",
+            "name": "footer_logo",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "jpg, svg, png"
+        },
+        {
             "key": "field_59377a4ffaa46",
             "label": "Header Options",
             "name": "",
@@ -538,7 +562,7 @@
                 "59px": "59px",
                 "60px": "60px"
             },
-            "default_value": [],
+            "default_value": false,
             "allow_null": 1,
             "multiple": 0,
             "ui": 1,
@@ -564,7 +588,7 @@
                 "text-center": "Center",
                 "text-right": "Right"
             },
-            "default_value": [],
+            "default_value": false,
             "allow_null": 1,
             "multiple": 0,
             "ui": 0,
@@ -641,7 +665,7 @@
                 "x-4": "Large (Horizontal Only)",
                 "x-5": "X-Large (Horizontal Only)"
             },
-            "default_value": [],
+            "default_value": false,
             "allow_null": 1,
             "multiple": 0,
             "ui": 0,
@@ -711,7 +735,7 @@
                         "envelope-o": "Email",
                         "map-marker": "Map"
                     },
-                    "default_value": [],
+                    "default_value": false,
                     "allow_null": 1,
                     "multiple": 0,
                     "ui": 0,
@@ -1039,5 +1063,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1561669555
+    "modified": 1589847220
 }

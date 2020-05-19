@@ -6,7 +6,7 @@ add_image_size('procedure_sm_thumb', 480, 429, true);
 add_image_size('featured_thumb', 480, 350, true);
 add_image_size('parent_thumb', 650, 650, true);
 add_image_size('gallery_thumb', 365, 365, true);
-add_image_size('postslider_thumb', 480, 650, true);
+add_image_size('postslider_thumb', 430, 600, true);
 
 function my_custom_sizes($sizes)
 {

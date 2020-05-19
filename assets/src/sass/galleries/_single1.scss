@@ -1,4 +1,9 @@
 .gallery.g1 {
+    .inner-gallery {
+        padding: 35px;
+        border-radius: 10px;
+        border: 1px solid $primary;
+    }
     .single-gallery {
         display: flex;
         justify-content: center;
@@ -9,5 +14,25 @@
             display: flex;
             text-align: center;
         }
+    }
+
+    .swiper-slide {
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: $primary;
+        background: transparent;
+        padding: 0;
+        margin: 0;
+        font-size: 40px;
+        transform: translateY(-50%);
+        transition: all 300ms linear;
+        -webkit-transition: all 300ms linear;
     }
 }

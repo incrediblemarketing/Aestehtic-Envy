@@ -16,7 +16,7 @@
         }
     }
 
-    >.row {
+    > .row {
         padding: 10vw 0 5vw;
 
         @include mq(md) {
@@ -111,7 +111,7 @@
             .gform_footer {
                 padding: 0;
 
-                input[type=submit] {
+                input[type="submit"] {
                     background: $primary;
                     color: $white;
                     display: flex;
@@ -122,7 +122,7 @@
                     justify-content: center;
                     width: 100%;
                     border: none;
-                    transition: all .5s;
+                    transition: all 0.5s;
                     border: 1px solid $primary;
 
                     @include mq(md) {
@@ -143,13 +143,167 @@
     }
 
     &.page__contact {
-
-        >.row {
+        > .row {
             padding: 50px 0;
         }
 
         .copyright {
             padding: 0;
+        }
+    }
+}
+
+#footer {
+    .footer-inner {
+        h3 {
+            font-size: 3.1rem;
+            line-height: 1em;
+            font-weight: 300;
+            color: $primary;
+            margin-bottom: 37px;
+        }
+
+        .gform_wrapper {
+            form {
+                .gform_body {
+                    ul {
+                        li {
+                            input,
+                            textarea {
+                                background: #ffffff;
+                                border: 1px solid #d8d8d8;
+                                box-shadow: 0px 10px 50px rgba(5, 27, 82, 0.25);
+                                padding: 12px 19px;
+                                font-size: 1rem;
+                                line-height: 1.1em;
+                                color: #d8d8d8;
+                                margin-bottom: 50px;
+                            }
+                        }
+                    }
+                }
+
+                .gform_footer {
+                    margin-top: 42px;
+
+                    input {
+                        width: 300px;
+                        height: 45px;
+                        background: $primary;
+                        color: $black;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+    .copyright {
+        margin-top: 100px;
+    }
+    .footer-row {
+        font-size: 1rem;
+        font-weight: 300;
+        text-transform: initial;
+
+        .social-icons {
+            margin-top: 2rem;
+            a {
+                color: $black;
+                border: 1px solid $black;
+                border-radius: 100em;
+            }
+            li {
+                margin-right: 1.4vw;
+                margin-left: 0;
+            }
+        }
+
+        h4 {
+            font-size: 1rem;
+            line-height: 1.33em;
+            color: $black;
+            margin-bottom: 0;
+            font-weight: normal;
+            margin-top: 1rem;
+
+            &:not(:first-child) {
+                margin-top: 0;
+            }
+        }
+        .footer-logo {
+            margin-bottom: 53px;
+        }
+
+        .section--box {
+            margin-top: 2rem;
+            p {
+                margin: 0;
+            }
+        }
+    }
+    .ig-feed {
+        padding: 170px 0;
+    }
+    .newsletter {
+        background: $primary;
+        padding: 108px 0 86px;
+
+        .area-flex {
+            display: flex;
+            align-items: center;
+
+            h3 {
+                margin: 0;
+                font-size: 3.1rem;
+                line-height: 1em;
+                color: $charcoal;
+                font-weight: 300;
+                white-space: nowrap;
+            }
+        }
+
+        .gform_wrapper {
+            width: 100%;
+            margin-left: 75px;
+
+            form {
+                width: 100%;
+                display: flex;
+                align-items: center;
+
+                .gform_body {
+                    ul {
+                        display: flex;
+                        li {
+                            margin-right: 75px;
+
+                            input {
+                                box-shadow: 0px 10px 50px rgba(5, 27, 82, 0.25);
+                                border: none;
+                                padding: 12px 19px;
+                                font-size: 18px;
+                                line-height: 22px;
+                                text-transform: capitalize;
+                                color: #d8d8d8;
+                            }
+                        }
+                    }
+                }
+
+                .gform_footer {
+                    margin: 0;
+                    width: auto;
+
+                    input {
+                        width: 300px;
+                        height: 45px;
+                        background: $charcoal;
+                        color: $white;
+                    }
+                }
+            }
         }
     }
 }

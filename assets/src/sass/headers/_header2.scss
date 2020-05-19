@@ -1,13 +1,27 @@
 #header.header2 {
-    height: 70px;
-    padding: 0 15px;
+    height: 125px;
+    padding: 0 4.3vw;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba($white, .95);
-    box-shadow: rgba($black, 0.1) 0 3px 3px;
+    background: rgba($white, 1);
     z-index: 99;
+    box-shadow: rgba($black, 0.1) 0px 1px 8px;
+
+    .btn-text,
+    .directions {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+        width: 60px;
+        border: 1px solid $black;
+        color: $black;
+        border-radius: 100em;
+        font-size: 24px;
+        margin-right: 25px;
+    }
 
     .logo {
         @include mq($until: lg) {
@@ -41,35 +55,51 @@
         left: 0;
         top: 0;
         width: auto;
-        height: 70px;
+        height: 125px;
         align-items: center !important;
+        margin: 0 auto;
 
         @include mq(lg) {
             display: flex;
         }
 
         .ubermenu {
-
             .ubermenu-submenu {
-                min-width: 230px;
+                min-width: 275px;
+                background: $white;
+
+                li {
+                    a {
+                        &:hover {
+                            background: $primary;
+                            color: $black;
+                        }
+
+                        i {
+                            transform: translateY(-50%);
+                            right: 8px;
+                            margin: 0;
+                        }
+                    }
+                }
             }
 
-
             .ubermenu-item-level-0 {
-                >.ubermenu-target {
+                > .ubermenu-target {
                     padding: 0px 25px;
                     font-weight: 400;
-                    height: 70px;
+                    height: 125px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    text-transform: uppercase;
 
                     &::after {
                         display: none;
                     }
 
                     span::before {
-                        content: '';
+                        content: "";
                         display: block;
                         height: 2px;
                         position: absolute;
@@ -84,6 +114,9 @@
                             opacity: 1;
                             transform: rotate(0deg) scale(1);
                         }
+                    }
+                    i {
+                        display: none;
                     }
                 }
 
@@ -103,7 +136,6 @@
         li {
             display: inline-block;
         }
-
     }
 
     .btn {
