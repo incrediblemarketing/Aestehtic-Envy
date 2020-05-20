@@ -218,6 +218,16 @@
                     });
                 },
                 proceduresRotator: function() {
+									if($(window).width() < 776){
+                    var mySwiper3 = new Swiper('.procedure-layout', {
+                        slidesPerView: 1,
+                        spaceBetween: 11,
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev'
+                        }
+										});
+									}
                     var mySwiper = new Swiper('.procedures-rotator', {
                         slidesPerView: 'auto',
                         spaceBetween: 0,

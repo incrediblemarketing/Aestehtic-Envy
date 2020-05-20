@@ -33,13 +33,19 @@ h1 {
 }
 
 h2 {
-    font-size: 3.11rem;
+    font-size: 1.8rem;
     font-weight: 300;
     line-height: 1em;
     text-align: center;
     text-transform: uppercase;
     color: $primary;
-    margin-bottom: 85px;
+    margin-bottom: 45px;
+
+    @include mq(lg) {
+        font-size: 3.11rem;
+        margin-bottom: 85px;
+    }
+
     strong {
         font-weight: normal;
     }

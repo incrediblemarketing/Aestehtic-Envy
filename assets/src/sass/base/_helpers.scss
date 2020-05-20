@@ -137,12 +137,26 @@
    ========================================================================== */
 
 .inner-block {
-    padding: 9.5vh 8.33333%;
+    padding: 60px 15px;
     position: relative;
     box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.15);
     background: $white;
+
+    @include mq(md) {
+        padding: 90px 35px;
+    }
+    @include mq(xl) {
+        padding: 9.5vh 8.33333%;
+    }
 }
 
+.embed-responsive {
+    margin-bottom: 35px !important;
+
+    @include mq(md) {
+        margin-bottom: 0 !important;
+    }
+}
 /* Slants
    ========================================================================== */
 

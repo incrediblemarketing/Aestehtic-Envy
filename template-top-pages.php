@@ -6,7 +6,7 @@
 global $post;
 get_header();  ?>
 <div class="row page-content justify-content-center padding-section">
-	<div class="col-lg-8 col-md-10 col-12">
+	<div class="col-xl-8 col-md-10 col-12">
 		<div class="procedure-grid single-grid">
 			<div class="procedure-holder single-holder">
 				<div class="image-holder">

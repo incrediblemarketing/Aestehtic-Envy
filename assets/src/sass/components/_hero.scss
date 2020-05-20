@@ -1,7 +1,6 @@
 #hero {
     height: 100vh;
-    height: 1238px;
-    padding: 0 0 132px;
+    padding: 0 0 10vh;
     display: flex;
     overflow: hidden;
     margin: 0;
@@ -9,6 +8,13 @@
     justify-content: center;
     text-align: center;
     color: $white;
+
+    @include mq(xl) {
+        padding: 0 0 50px;
+    }
+    @include mq(xxl) {
+        padding: 0 0 10vh;
+    }
 
     &.video-overlay:before {
         background: rgba(0, 0, 0, 0.2);
@@ -71,8 +77,12 @@
             position: relative;
             margin: 0 auto;
             z-index: 2;
-            width: 100%;
-            max-width: calc(100% - 30px);
+            width: calc(100vw - 30px);
+            max-width: calc(100vw - 30px);
+
+            @include mq(md) {
+                width: 70vw;
+            }
 
             @include mq(lg) {
                 max-width: 75vw;
@@ -84,12 +94,21 @@
             }
 
             h1 {
-                font-size: 2.88rem;
+                font-size: 1.5rem;
                 color: $white;
                 line-height: 1em;
                 text-align: center;
-                margin-bottom: 18px;
+                margin-bottom: 5px;
                 font-weight: 300;
+
+                @include mq(md) {
+                    margin-bottom: 18px;
+                    font-size: 2.4rem;
+                }
+
+                @include mq(xl) {
+                    font-size: 2.88rem;
+                }
 
                 strong {
                     text-transform: uppercase;
@@ -102,10 +121,16 @@
             }
 
             p {
-                margin-bottom: 64px;
-                font-size: 24px;
-                line-height: 29px;
+                margin-bottom: 20px;
+                font-size: 18px;
+                line-height: 23px;
                 font-weight: normal;
+
+                @include mq(md) {
+                    margin-bottom: 64px;
+                    font-size: 24px;
+                    line-height: 29px;
+                }
             }
 
             .btn {

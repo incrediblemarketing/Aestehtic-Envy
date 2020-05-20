@@ -62,19 +62,34 @@ article {
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
+    flex-direction: column;
+
+    @include mq(md) {
+        flex-direction: row;
+    }
 }
 .column__image--content .holder__image {
-    width: 67%;
-    height: 100%;
+    width: 100%;
+    height: auto;
+
+    @include mq(md) {
+        width: 67%;
+        height: 100%;
+    }
 }
 .column__image--content .holder__content {
-    width: 58%;
-    margin-left: -5%;
-    padding: 5vh 0 5vh 3vw;
+    width: 100%;
+    margin-top: 35px;
     background: #fff;
     text-align: left;
     z-index: 2;
-    box-shadow: rgba(0, 0, 0, 0.1) -22px 21px 15px;
+
+    @include mq(md) {
+        width: 58%;
+        margin-left: -5%;
+        padding: 5vh 0 5vh 3vw;
+        box-shadow: rgba(0, 0, 0, 0.1) -22px 21px 15px;
+    }
 }
 .column__image--content .holder__content ul li::before {
     margin-left: 0;
@@ -87,22 +102,34 @@ article {
 }
 
 .column__image--content.flex-row-reverse {
-    flex-direction: row-reverse;
+    flex-direction: column !important;
+
+    @include mq(md) {
+        flex-direction: row-reverse !important;
+    }
 }
 
 .column__image--content.image--right .holder__content {
-    margin-left: 0;
-    width: 62%;
-    margin-right: -11%;
-    padding: 5vh 1.5vw 5vh 0;
+    width: 100%;
     background: #fff;
     text-align: left;
     z-index: 2;
-    box-shadow: rgba(0, 0, 0, 0.1) 22px 21px 15px;
+
+    @include mq(md) {
+        margin-left: 0;
+        width: 62%;
+        margin-right: -11%;
+        padding: 5vh 1.5vw 5vh 0;
+        box-shadow: rgba(0, 0, 0, 0.1) 22px 21px 15px;
+    }
 }
 
 .column__image--content.image--right .holder__image {
-    width: 73%;
+    width: 100%;
+
+    @include mq(md) {
+        width: 73%;
+    }
 }
 
 .column__contact {
@@ -119,6 +146,10 @@ article {
     margin: 80px 0 0;
 }
 
+.column__contact .btn {
+    width: 300px;
+    max-width: 100%;
+}
 .column__contact::before {
     content: "";
     position: absolute;
@@ -132,8 +163,13 @@ article {
 
 .procedure-content .column__contact h2 {
     color: $white !important;
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 50px;
+    text-align: center !important;
+
+    @include mq(md) {
+        font-size: 3rem;
+    }
 }
 
 #content-row-2,
@@ -141,14 +177,21 @@ article {
     margin: 35px 0;
 }
 
+.navigation-single {
+    margin-bottom: 35px;
+}
 .blog--page {
     article {
         display: grid;
-        grid-template-columns: 250px 1fr;
+        grid-template-columns: 1fr;
         grid-gap: 35px;
         margin-bottom: 35px;
         padding-bottom: 35px;
         border-bottom: 1px solid #efefef;
+
+        @include mq(md) {
+            grid-template-columns: 250px 1fr;
+        }
 
         h2 {
             font-size: 1.4rem;

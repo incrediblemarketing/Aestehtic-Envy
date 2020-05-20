@@ -27,7 +27,11 @@
 }
 
 .pad-md {
-    padding: 5vw;
+    padding: 60px 15px;
+
+    @include mq(lg) {
+        padding: 5vw;
+    }
 }
 
 .pad-lg {

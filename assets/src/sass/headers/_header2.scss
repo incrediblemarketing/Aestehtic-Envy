@@ -1,6 +1,6 @@
 #header.header2 {
-    height: 125px;
-    padding: 0 4.3vw;
+    height: 80px;
+    padding: 0 15px;
     position: fixed;
     top: 0;
     left: 0;
@@ -9,18 +9,49 @@
     z-index: 99;
     box-shadow: rgba($black, 0.1) 0px 1px 8px;
 
+    @include mq(lg) {
+        height: 100px;
+    }
+    @include mq(xl) {
+        height: 125px;
+    }
+    @include mq(xxl) {
+        padding: 0 4.3vw;
+    }
+
     .btn-text,
     .directions {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 60px;
-        width: 60px;
+        height: 40px;
+        width: 40px;
         border: 1px solid $black;
         color: $black;
         border-radius: 100em;
         font-size: 24px;
-        margin-right: 25px;
+        margin-right: 15px;
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        @include mq($until: md) {
+            display: none !important;
+        }
+
+        @include mq(lg) {
+            position: relative;
+            top: unset;
+            right: unset;
+        }
+
+        @include mq(xl) {
+            margin-right: 25px;
+            height: 60px;
+            width: 60px;
+        }
+    }
+    .btn-text {
+        right: 100px;
     }
 
     .logo {
@@ -29,6 +60,10 @@
             top: 5px;
             left: 50%;
             transform: translateX(-50%);
+            img {
+                height: 70px;
+                width: auto;
+            }
         }
     }
 
@@ -55,12 +90,16 @@
         left: 0;
         top: 0;
         width: auto;
-        height: 125px;
+        height: 100px;
         align-items: center !important;
         margin: 0 auto;
 
         @include mq(lg) {
             display: flex;
+        }
+
+        @include mq(xl) {
+            height: 125px;
         }
 
         .ubermenu {
@@ -86,13 +125,22 @@
 
             .ubermenu-item-level-0 {
                 > .ubermenu-target {
-                    padding: 0px 25px;
+                    padding: 0px 7px;
                     font-weight: 400;
-                    height: 125px;
+                    height: 100px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     text-transform: uppercase;
+
+                    @include mq(xl) {
+                        padding: 0px 10px;
+                        height: 125px;
+                    }
+
+                    @include mq(xxl) {
+                        padding: 0px 25px;
+                    }
 
                     &::after {
                         display: none;
@@ -144,7 +192,7 @@
         padding: 0 !important;
         position: absolute;
         right: 0;
-        top: 15px;
+        top: 20px;
 
         @include mq(lg) {
             top: 0;
@@ -184,5 +232,5 @@
 }
 
 .taptap-menu-button-wrapper {
-    top: 12px;
+    top: 18px;
 }

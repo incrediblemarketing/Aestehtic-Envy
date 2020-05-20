@@ -16,7 +16,7 @@
 ?>
 <?php get_header(); ?>
 <div class="row page-content justify-content-center padding-section">
-<div class="col-lg-8 col-md-10 col-12">
+<div class="col-xl-8 col-md-10 col-12">
 	<div class="procedure-content">
 			<h1>Procedures</h1>
 			<?php

@@ -32,13 +32,14 @@ if ($title || $content) {
 }
 
 if ($posts) : ?>
-    <div class="procedure-layout row">
+    <div class="swiper-container procedure-layout">
+			<div class="swiper-wrapper">
         <?php foreach ($procedures as $post) :
             setup_postdata($post);
             $thumb_id = get_post_thumbnail_id();
             $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'postslider_thumb', true);
             $thumb_url = $thumb_url_array[0]; ?>
-            <div class="procedure-card">
+            <div class="swiper-slide procedure-card">
                 <a href="<?php the_permalink(); ?>">
                     <div class="card-bottom">
 											<img src="<?php echo $thumb_url; ?>" />
@@ -46,7 +47,10 @@ if ($posts) : ?>
                     </div>
                 </a>
             </div>
-        <?php endforeach; ?>
+				<?php endforeach; ?>
+				</div>
+				<div class="swiper-button-next"><i class="fa fa-chevron-right"></i></div>
+    		<div class="swiper-button-prev"><i class="fa fa-chevron-left"></i></div>
     </div>
     <?php
     wp_reset_postdata();

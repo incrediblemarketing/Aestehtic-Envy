@@ -85,25 +85,71 @@
     }
 }
 .acc-grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 61px;
+
+    @include mq(md) {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .item {
+        text-align: center;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        width: auto;
+        margin: 0 auto;
+        max-height: 50px;
+
+        @include mq(md) {
+            max-height: 70px;
+        }
+        @include mq(lg) {
+            max-height: 80px;
+        }
+        @include mq(xl) {
+            max-height: 100px;
+        }
+
+        @include mq(xxl) {
+            max-height: unset;
+        }
+    }
 }
 
 .testimonial--area {
     background: #333;
     color: #fff;
-    padding: 113px 15vw;
+    padding: 80px 15px;
+
+    @include mq(md) {
+        padding: 100px 6vw;
+    }
+
+    @include mq(xl) {
+        padding: 113px 8vw;
+    }
+    @include mq(xxl) {
+        padding: 113px 15vw;
+    }
 
     h2 {
         text-align: left;
+        margin-bottom: 35px;
     }
 
     .quote {
-        padding: 0 0 0 100px;
+        padding: 0;
         position: relative;
         font-style: italic;
+
+        @include mq(xl) {
+            padding: 0 0 0 100px;
+        }
 
         &::before {
             content: "\f10d";
@@ -112,10 +158,14 @@
             color: rgba($white, 0.1);
             position: absolute;
             top: 0;
-            left: 50px;
+            left: -25px;
             font-family: $fontawesome;
             font-weight: 600;
             font-style: normal;
+
+            @include mq(xl) {
+                left: 50px;
+            }
         }
 
         strong {
@@ -129,7 +179,10 @@
 }
 
 .gallery--area {
-    height: 800px;
+    height: 100vh;
+    @include mq(md) {
+        height: 800px;
+    }
 
     .col-xl-7 {
         padding: 0;
@@ -142,10 +195,21 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        background: $white;
+        background: rgba($black, 0.5);
         flex-direction: column;
-        clip-path: polygon(0 0, 70% 0%, 100% 100%, 0% 100%);
-        padding-right: 13vw;
+
+        @include mq(md) {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: $white;
+            flex-direction: column;
+            clip-path: polygon(0 0, 70% 0%, 100% 100%, 0% 100%);
+            padding-right: 13vw;
+        }
 
         h2 {
             margin-bottom: 85px;
