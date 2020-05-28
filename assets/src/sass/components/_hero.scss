@@ -8,6 +8,7 @@
     justify-content: center;
     text-align: center;
     color: $white;
+    background-position: center 80px !important;
 
     @include mq(xl) {
         padding: 0 0 50px;

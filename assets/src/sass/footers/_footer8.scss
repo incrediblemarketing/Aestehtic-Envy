@@ -176,7 +176,7 @@
                                 padding: 12px 19px;
                                 font-size: 1rem;
                                 line-height: 1.1em;
-                                color: #d8d8d8;
+                                color: #111;
                                 margin-bottom: 10px;
 
                                 @include mq(md) {
@@ -198,9 +198,15 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                        transition: all 0.4s ease-in-out;
 
                         @include mq(md) {
                             width: 300px;
+                        }
+
+                        &:hover {
+                            color: $primary;
+                            background: $charcoal;
                         }
                     }
                 }
@@ -349,7 +355,7 @@
                                 font-size: 18px;
                                 line-height: 22px;
                                 text-transform: capitalize;
-                                color: #d8d8d8;
+                                color: #111;
                             }
                         }
                     }
@@ -364,9 +370,14 @@
                         height: 45px;
                         background: $charcoal;
                         color: $white;
+                        transition: all 0.4s ease-in-out;
 
                         @include mq(xxl) {
                             width: 300px;
+                        }
+
+                        &:hover {
+                            background: $primary;
                         }
                     }
                 }

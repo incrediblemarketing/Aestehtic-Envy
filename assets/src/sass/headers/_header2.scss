@@ -132,14 +132,11 @@
                     align-items: center;
                     justify-content: center;
                     text-transform: uppercase;
+                    font-size: 15px;
 
                     @include mq(xl) {
                         padding: 0px 10px;
                         height: 125px;
-                    }
-
-                    @include mq(xxl) {
-                        padding: 0px 25px;
                     }
 
                     &::after {

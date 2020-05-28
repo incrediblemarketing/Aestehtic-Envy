@@ -3,10 +3,9 @@
 /**
  * Procedures Archive Template
  *
- *
  * @file           archive-procedures.php
- * @package        StrapPress 
- * @author         Brad Williams 
+ * @package        StrapPress
+ * @author         Brad Williams
  * @copyright      2011 - 2014 Brag Interactive
  * @license        license.txt
  * @version        Release: 3.2.0.1
@@ -28,14 +27,16 @@
 				'orderby'        => 'title',
 			);
 
-			$parent = new WP_Query($args);
-			if ($parent->have_posts()) :
+			$parent = new WP_Query( $args );
+			if ( $parent->have_posts() ) :
 				echo '<div class="procedure-grid">';
-				while ($parent->have_posts()) : $parent->the_post(); ?>
+				while ( $parent->have_posts() ) :
+					$parent->the_post();
+					?>
 					<?php $thumb_id = get_post_thumbnail_id(); ?>
 					<div class="procedure-holder single-holder">
 						<div class="image-holder">
-							<?php echo wp_get_attachment_image($thumb_id, 'featured_thumb'); ?>
+							<?php echo wp_get_attachment_image( $thumb_id, 'featured_thumb' ); ?>
 						</div>
 						<div class="procedure-list">
 							<h2><?php the_title(); ?></h2>
@@ -45,18 +46,27 @@
 										'posts_per_page' => -1,
 										'post_parent'    => $post->ID,
 										'order'          => 'ASC',
-										'orderby'        => 'title'
+										'orderby'        => 'title',
 									);
 
-									$parent2 = new WP_Query($args);
-									if ($parent2->have_posts()) :
+									$parent2 = new WP_Query( $args );
+									if ( $parent2->have_posts() ) :
 										echo '<ul>';
-										while ($parent2->have_posts()) : $parent2->the_post();
-											echo '<li><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>';
+										while ( $parent2->have_posts() ) :
+											$parent2->the_post();
+											$ids = array(1006,1007,1008,1009,1010,1011);
+											if (!empty($post->ID) && is_numeric($post->ID) && in_array((int)$post->ID, $ids)) {
+												echo '<li>' . get_the_title() . '</li>';
+											}else{
+												echo '<li><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>';
+											}
 										endwhile;
 										echo '</ul>';
+
+										else :
+											echo '<ul><li><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li></ul>';
 									endif;
-									?>
+										?>
 						</div>
 					</div>
 				<?php endwhile; ?>
