@@ -65,6 +65,14 @@
                 width: auto;
             }
         }
+        img {
+            width: auto;
+            height: 85px;
+
+            @include mq(xl) {
+                height: 100px;
+            }
+        }
     }
 
     #logo,
@@ -84,6 +92,13 @@
         }
     }
 
+    .click-text {
+        align-items: center;
+        margin-right: 25px;
+        @include mq($until: lg) {
+            display: none !important;
+        }
+    }
     nav {
         display: none;
         position: relative;

@@ -254,6 +254,8 @@
         .footer-logo {
             margin: 0 auto 53px;
             display: block;
+            height: 205px;
+            width: auto;
 
             @include mq(md) {
                 margin-bottom: 53px;
