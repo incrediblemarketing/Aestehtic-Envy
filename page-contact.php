@@ -5,7 +5,7 @@
 		<div class="pad-md">
 		<h1>Contact Us</h1>
 		<h3>We are proud to be with you on this journey!</h3>
-		<h4>Phone</h4>
+		<h4>Phone <small>(Call or Text)</small></h4>
 					<a href="tel:<?php echo $business_location['business_phone_url']; ?>"><?php echo $business_location['business_phone_display']; ?></a>
 					<?php if ( get_field( 'business_locations', 'option' ) ) : ?>
 						<?php while ( has_sub_field( 'business_locations', 'option' ) ) : ?>
@@ -25,7 +25,7 @@
 			<div class="section--box">
 				<h4>Business Hours</h4>
 				<p><strong>Monday – Friday:</strong> 9:00am – 5:30 pm</p>
-				<p><strong>First & Third Saturday:</strong> 9:00am – 2:00pm</p>
+				<p><strong>Every Other Saturday:</strong> 9:00am – 2:00pm</p>
 				<p><strong>Sunday:</strong> Closed</p>
 			</div>
 					<?php get_template_part( 'components/social-icons' ); ?>

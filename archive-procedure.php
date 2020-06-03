@@ -54,10 +54,10 @@
 										echo '<ul>';
 										while ( $parent2->have_posts() ) :
 											$parent2->the_post();
-											$ids = array(1006,1007,1008,1009,1010,1011);
-											if (!empty($post->ID) && is_numeric($post->ID) && in_array((int)$post->ID, $ids)) {
+											$ids = array( 1006, 1007, 1008, 1009, 1010, 1011, 1141, 1142 );
+											if ( ! empty( $post->ID ) && is_numeric( $post->ID ) && in_array( (int) $post->ID, $ids ) ) {
 												echo '<li>' . get_the_title() . '</li>';
-											}else{
+											} else {
 												echo '<li><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>';
 											}
 										endwhile;
