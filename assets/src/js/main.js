@@ -228,6 +228,20 @@
                         }
 										});
 									}
+                    var mySwiper = new Swiper('.testimonial--rotator', {
+                        slidesPerView: 1,
+												spaceBetween: 15,
+												autoplay: {
+													delay: 6000,
+													disableOnInteraction: false
+												},
+												loop: true,
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev'
+                        }
+										});
+										
                     var mySwiper = new Swiper('.procedures-rotator', {
                         slidesPerView: 'auto',
                         spaceBetween: 0,
