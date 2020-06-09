@@ -10,7 +10,7 @@ get_header();  ?>
 		<div class="procedure-grid single-grid">
 			<div class="procedure-holder single-holder">
 				<div class="image-holder">
-					<?php echo get_the_post_thumbnail($thumb_id, 'featured_thumb'); ?>
+					<?php echo get_the_post_thumbnail( $thumb_id, 'featured_thumb' ); ?>
 				</div>
 				<div class="procedure-list">
 					<h1><?php echo the_title(); ?></h1>
@@ -21,13 +21,24 @@ get_header();  ?>
 								'posts_per_page' => -1,
 								'post_parent'    => $post->ID,
 								'order'          => 'ASC',
-								'orderby'        => 'title'
+								'orderby'        => 'title',
 							);
 
-							$parent = new WP_Query($args);
-							if ($parent->have_posts()) : ?>
-							<?php while ($parent->have_posts()) : $parent->the_post(); ?>
-								<li><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></li>
+							$parent = new WP_Query( $args );
+							if ( $parent->have_posts() ) :
+								?>
+								<?php
+								while ( $parent->have_posts() ) :
+									$parent->the_post();
+									?>
+									<?php
+									$ids = array( 1006, 1007, 1008, 1009, 1010, 1011, 1141, 1142 );
+									if ( ! empty( $post->ID ) && is_numeric( $post->ID ) && in_array( (int) $post->ID, $ids ) ) {
+										echo '<li>' . get_the_title() . '</li>';
+									} else {
+										echo '<li><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>';
+									}
+									?>
 							<?php endwhile; ?>
 						<?php endif; ?>
 					</ul>
